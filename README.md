@@ -3,4 +3,4 @@ Hardware-independent ModbusRTU slave module library for STM32 MCUs . (STM32 F0 ,
 ---
 !*Note on Documentation Language:
 [EN] The code descriptions and comment lines within the library are currently in Turkish. I will be translate all comment lines to Engilish in upcoming versions to make it global.
-[TR] Kütüphane içierisinde bulunan açıklamalar ve yorum satırları şu anda sadece Türkçe'dir. Gelecek sürümde İngilizce versiyonunu paylaşacağım.
+[TR] Kütüphane içerisinde bulunan açıklamalar ve yorum satırları şu anda sadece Türkçe'dir. Gelecek sürümde İngilizce versiyonunu paylaşacağım.
