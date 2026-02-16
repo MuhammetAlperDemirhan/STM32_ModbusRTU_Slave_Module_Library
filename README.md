@@ -10,7 +10,7 @@ Bu proje bir Elektrik Mühendisliği öğrencisi olarak benim ilk ciddi STM32 pr
 ---
 
 
-⚙️**KULLANIM İÇİN ÖRENK PROJEYİDE İNCELEYEBİLİRSİNİZ**⚙️
+⚙️**KULLANIM İÇİN ÖRNEK PROJEYİDE İNCELEYEBİLİRSİNİZ**⚙️
 ⚙️**KULLANIM ÖNCESİNDE README MUTKALA OKUNMALIDIR**⚙️
 
 
