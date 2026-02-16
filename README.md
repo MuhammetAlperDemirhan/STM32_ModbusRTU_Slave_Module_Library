@@ -15,15 +15,15 @@ Bu proje bir Elektrik Mühendisliği öğrencisi olarak benim ilk ciddi STM32 pr
 
 
 ## Table of Contents
-* [⚙️Function of the Library:⚙️](#function-of-the-library)
-* [⚙️Supported MCU Families:⚙️](#supported-mcu-families)
-* [⚙️Supported Modbus RTU Function Codes:⚙️](#supported-modbus-rtu-function-codes)
-* [⚙️Installation and CubeMX (.ioc) Settings:⚙️](#installation-and-cubemx-ioc-settings)
-* [⚙️Project Integration and Personalization:⚙️](#project-integration-and-personalization)
-* [⚙️Management of Connectivity Settings and Updating to Factory Settings:⚙️](#management-of-connectivity-settings-and-updating-to-factory-settings)
+* [⚙️ Function of the Library: ⚙️](#function-of-the-library)
+* [⚙️ Supported MCU Families: ⚙️](#supported-mcu-families)
+* [⚙️ Supported Modbus RTU Function Codes: ⚙️](#supported-modbus-rtu-function-codes)
+* [⚙️ Installation and CubeMX (.ioc) Settings: ⚙️](#installation-and-cubemx-ioc-settings)
+* [⚙️ Project Integration and Personalization: ⚙️](#project-integration-and-personalization)
+* [⚙️ Management of Connectivity Settings and Updating to Factory Settings: ⚙️](#management-of-connectivity-settings-and-updating-to-factory-settings)
 
   
-## ⚙️Function of the Library:⚙️
+## ⚙️ Function of the Library: ⚙️
 [TR] STM32 Modbus RTU Slave Modül Kütüphanesi, STM32 tabanlı cihazların USART çevre birimini kullanarak Modbus RTU protokolü ile "Slave" olarak haberleşmesine olanak sağlamak amacıyla geliştirilmiştir. Cihaz donanımına bir TTL to RS485 Converter modülü entegre edilerek, RS485 standardı üzerinden diğer endüstriyel cihazlarla Slave olarak (PLC, HMI vb.) sorunsuz iletişim kurması sağlanır. Kütüphane, piyasadaki Otomatik Flow Kontrollü ve klasik (DE/RE Pin tetiği kullanan) RS485 Converter'ların tamamıyla tam uyumlu çalışır.
 
 ### 🔄1. Kütüphanenin sunduğu temel yetenekler:
@@ -39,12 +39,12 @@ Bu proje bir Elektrik Mühendisliği öğrencisi olarak benim ilk ciddi STM32 pr
 Receive ve Transmit işlemleri tamamen **DMA + Interrupt** tabanlı yapılandırılmıştır. Bu sayede CPU meşgul edilmez ve projenizin ana kod akışını engellemeden arka planda kusursuz bir şekilde çalışır.
 
 
-## ⚙️Supported MCU Families:⚙️
+## ⚙️ Supported MCU Families: ⚙️
 `STM32F0`, `STM32F1`, `STM32F2`, `STM32F3`, `STM32F4`, `STM32F7`
 `STM32G0`, `STM32G4`, `STM32L0`, `STM32L1`, `STM32L4`, `STM32L5`, `STM32C0`
 
 
-## ⚙️Supported Modbus RTU Function Codes:⚙️
+## ⚙️ Supported Modbus RTU Function Codes: ⚙️
 **Kütüphane, endüstriyel standartlardaki temel Modbus fonksiyonlarını eksiksiz destekler**
 * `0x01` - Read Coils
 * `0x02` - Read Discrete Inputs
@@ -57,7 +57,7 @@ Receive ve Transmit işlemleri tamamen **DMA + Interrupt** tabanlı yapılandır
 * `Error` - Exception Codes
 
 
-## ⚙️Installation and CubeMX (.ioc) Settings:⚙️
+## ⚙️ Installation and CubeMX (.ioc) Settings: ⚙️
 Kütüphanenin mikrodenetleyiciyi meşgul etmeden çalışabilmesi için projeyi oluştururken STM32CubeMX (.ioc) arayüzü üzerinden aşağıdaki ayarların eksiksiz yapılması gerekmektedir:
 
 ### 🔄1. USART Donanım Ayarları
@@ -89,7 +89,7 @@ Derleyicinin başlık dosyalarını bulabilmesi için bu yeni klasörü IDE'ye t
 4. Üstteki **Add... (Yeşil Artı)** simgesine tıklayın, `Workspace...` butonuna basın ve oluşturduğunuz `Modbus_Library/Inc` klasörünü seçip `Apply and Close` diyerek kaydedin.
 
 
-## ⚙️Project Integration and Personalization:⚙️
+## ⚙️ Project Integration and Personalization: ⚙️
 Kütüphaneyi projenize ekledikten sonra, donanım pinlerinizi ve sensör verilerinizi sisteme tanıtmak için aşağıdaki dosyalar içerisinde belirtilen işlemleri yapmanız gerekmektedir:
 
 ### 🔄1. MB_USER_BOX.c İşlemleri
@@ -111,7 +111,7 @@ Kütüphaneyi projenize ekledikten sonra, donanım pinlerinizi ve sensör verile
 > **Kendi yazılımınız içerisinde bu 4 değere kesinlikle veri yazmaya veya değiştirmeye çalışmayınız!** Bu ayarlar sadece Master cihazdan gelen Modbus mesajları ile güncellenebilir. (Bir güncelleme geldiğinde kütüphane yeni ayarları otomatik olarak işlemcinin Flash hafızasına kaydeder ve cihaz açılıp kapatıldığında ayarlar güncellenir).
 
 
-## ⚙️Management of Connectivity Settings and Updating to Factory Settings:⚙️
+## ⚙️ Management of Connectivity Settings and Updating to Factory Settings: ⚙️
 Kütüphane, cihazın haberleşme ayarlarını (Slave ID, Baud Rate, Parity) sahada dinamik olarak yönetebilmeniz için size iki güçlü yöntem sunar: Master üzerinden uzaktan güncelleme ve fiziksel buton ile donanımsal sıfırlama.
 
 ### 🔄1. Master Cihaz Üzerinden Uzaktan Güncelleme
