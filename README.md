@@ -127,10 +127,11 @@ Bir Master cihaz (PLC, HMI vb.) üzerinden cihazın haberleşme ayarlarını kal
 Sahada yaşanabilecek adres çakışmaları veya haberleşme ayarlarının unutulması gibi kritik durumlarda, cihaza ekleyeceğiniz fiziksel bir buton ile ayarları varsayılana döndürebilirsiniz. Bu işlem endüstriyel standartlarda, yanlışlıkla basılmalara karşı korumalı bir şekilde yönetir.
 
 🔹**Çalışma Mantığı ve Güvenlik Koruması:**
-1. **Basılı Tutma:** Reset butonuna basıldığında sistem önce **2 saniye** bekler (anlık dokunmaları veya elektriksel gürültüleri yok sayar).
-2. **Onay Süreci:**  2 saniye sonunda buton hala basılıysa, fonksiyonda tanımladığınız **Durum LED'i 10 defa hızlıca yanıp sönerek** kullanıcıya işlemin başlayacağı uyarısını verir.
-3. **İptal veya Onay:** Bu yanıp sönme süreci bitene kadar butonu basılı tutmaya devam etmeniz gerekir. Eğer süreç bitmeden butonu bırakırsanız işlem iptal edilir.
-4. **Sıfırlama:** Yanıp sönme bittiğinde buton hala basılı durumdaysa, cihaz Flash hafızadaki mevcut tüm kullanıcı ayarlarını siler ve kütüphaneyi ilk başlattığınızdaki varsayılan ayarlara kalıcı olarak geri döner.
+1. **Sıfırlamayı Başlatma:** Sıfırlama işlemi için cihazın ilk açılış anı (elektrik verilirken) Reset butonuna basılı tutulurken yapılmalıdır. Led yanıp tamamen sönene kadar basılı tutulmalıdır.
+2. **Basılı Tutma:** Reset butonuna basıldığında sistem önce **2 saniye** bekler (anlık dokunmaları veya elektriksel gürültüleri yok sayar).
+3. **Onay Süreci:**  2 saniye sonunda buton hala basılıysa, fonksiyonda tanımladığınız **Durum LED'i 10 defa hızlıca yanıp sönerek** kullanıcıya işlemin başlayacağı uyarısını verir.
+4. **İptal veya Onay:** Bu yanıp sönme süreci bitene kadar butonu basılı tutmaya devam etmeniz gerekir. Eğer süreç bitmeden butonu bırakırsanız işlem iptal edilir.
+5. **Sıfırlama:** Yanıp sönme bittiğinde buton hala basılı durumdaysa, cihaz Flash hafızadaki mevcut tüm kullanıcı ayarlarını siler ve kütüphaneyi ilk başlattığınızdaki varsayılan ayarlara kalıcı olarak geri döner.
 
 🔹**Donanım ve CubeMX Bağlantı Kuralları:**
 Kütüphanenin bu özelliği doğru kontrol edebilmesi için donanım bağlantılarınızın ve STM32CubeMX ayarlarınızın şu şekilde olması şarttır:
