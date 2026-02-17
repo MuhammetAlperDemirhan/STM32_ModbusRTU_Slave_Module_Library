@@ -240,8 +240,10 @@ void SECTOR_HESAPLA(uint32_t Address , uint32_t *SECTOR , uint32_t *BANK) //****
 		else if ((Address >= 0x0800C000) && (Address <= 0x0800FFFF )){ *SECTOR = FLASH_SECTOR_3 ; }
 		else if ((Address >= 0x08010000) && (Address <= 0x0801FFFF )){ *SECTOR = FLASH_SECTOR_4 ; }
 		else if ((Address >= 0x08020000) && (Address <= 0x0803FFFF )){ *SECTOR = FLASH_SECTOR_5 ; }
+#if defined (FLASH_SECTOR_6)
 		else if ((Address >= 0x08040000) && (Address <= 0x0805FFFF )){ *SECTOR = FLASH_SECTOR_6 ; }
 		else if ((Address >= 0x08060000) && (Address <= 0x0807FFFF )){ *SECTOR = FLASH_SECTOR_7 ; }
+#endif
 #if defined (FLASH_SECTOR_8)
 		else if ((Address >= 0x08080000) && (Address <= 0x0809FFFF )){ *SECTOR = FLASH_SECTOR_8 ; }
 		else if ((Address >= 0x080A0000) && (Address <= 0x080BFFFF )){ *SECTOR = FLASH_SECTOR_9 ; }
@@ -257,8 +259,10 @@ void SECTOR_HESAPLA(uint32_t Address , uint32_t *SECTOR , uint32_t *BANK) //****
 		else if ((Address >= 0x08018000) && (Address <= 0x0801FFFF )){ *SECTOR = FLASH_SECTOR_3 ; }
 		else if ((Address >= 0x08020000) && (Address <= 0x0803FFFF )){ *SECTOR = FLASH_SECTOR_4 ; }
 		else if ((Address >= 0x08040000) && (Address <= 0x0807FFFF )){ *SECTOR = FLASH_SECTOR_5 ; }
+#if defined (FLASH_SECTOR_6)
 		else if ((Address >= 0x08080000) && (Address <= 0x080BFFFF )){ *SECTOR = FLASH_SECTOR_6 ; }
 		else if ((Address >= 0x080C0000) && (Address <= 0x080FFFFF )){ *SECTOR = FLASH_SECTOR_7 ; }
+#endif
 #if defined (FLASH_SECTOR_8)
 		else if ((Address >= 0x08100000) && (Address <= 0x0813FFFF )){ *SECTOR = FLASH_SECTOR_8 ; }
 		else if ((Address >= 0x08140000) && (Address <= 0x0817FFFF )){ *SECTOR = FLASH_SECTOR_9 ; }
@@ -286,8 +290,10 @@ void SECTOR_HESAPLA(uint32_t Address , uint32_t *SECTOR , uint32_t *BANK) //****
 		else if ((Address >= 0x0800C000) && (Address <= 0x0800FFFF)){ *SECTOR = FLASH_SECTOR_3 ; }
 		else if ((Address >= 0x08010000) && (Address <= 0x0801FFFF)){ *SECTOR = FLASH_SECTOR_4 ; }
 		else if ((Address >= 0x08020000) && (Address <= 0x0803FFFF)){ *SECTOR = FLASH_SECTOR_5 ; }
+#if defined (FLASH_SECTOR_6)
 		else if ((Address >= 0x08040000) && (Address <= 0x0805FFFF)){ *SECTOR = FLASH_SECTOR_6 ; }
 		else if ((Address >= 0x08060000) && (Address <= 0x0807FFFF)){ *SECTOR = FLASH_SECTOR_7 ; }
+#endif	
 #if defined (FLASH_SECTOR_8)
 		else if ((Address >= 0x08080000) && (Address <= 0x0809FFFF)){ *SECTOR = FLASH_SECTOR_8 ; }
 		else if ((Address >= 0x080A0000) && (Address <= 0x080BFFFF)){ *SECTOR = FLASH_SECTOR_9 ; }
@@ -311,3 +317,4 @@ void SECTOR_HESAPLA(uint32_t Address , uint32_t *SECTOR , uint32_t *BANK) //****
 #endif
 	}
 }
+
