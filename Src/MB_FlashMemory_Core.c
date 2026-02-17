@@ -35,7 +35,7 @@ uint32_t Flash_Write( uint8_t slaveID , uint32_t BaudRate , uint32_t ParityBit) 
 
 #if defined (MB_Sector)
 	SettingsFlash.TypeErase = FLASH_TYPEERASE_SECTORS ;
-	SettingsFlash.Sector = 6 ;
+	SettingsFlash.Sector = SECTOR_NO ;
 	SettingsFlash.NbSectors = 1 ;
 	SettingsFlash.VoltageRange = FLASH_VOLTAGE_RANGE_3 ;
 #if defined (FLASH_BANK_1)
@@ -317,4 +317,5 @@ void SECTOR_HESAPLA(uint32_t Address , uint32_t *SECTOR , uint32_t *BANK) //****
 #endif
 	}
 }
+
 
