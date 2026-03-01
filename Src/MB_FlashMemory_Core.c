@@ -100,6 +100,8 @@ uint32_t Flash_Read(uint32_t addressR) //***************************************
 	return *(__IO uint32_t*)addressR ;
 #elif defined (MB_DoubleWord)
 	return *(__IO uint64_t*)addressR ;
+#else
+	return 0 ;
 #endif
 }
 
@@ -317,5 +319,6 @@ void SECTOR_HESAPLA(uint32_t Address , uint32_t *SECTOR , uint32_t *BANK) //****
 #endif
 	}
 }
+
 
 
