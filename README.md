@@ -2,7 +2,7 @@
 Hardware-independent ModbusRTU slave module library for STM32 MCUs . (STM32 F0 , F1 , F2 , F3 , F4 , F7 , G0 , G4 , L0 , L1 , L4 , L5 , C0 )
 ---
 ## ✍️ Designer Note:
-Bu proje bir Elektrik Mühendisliği öğrencisi olarak benim ilk ciddi STM32 projem. Bu kütüphaneyi yazarken çok fazla şey öğrendim ve elimden gelenin en iyisini yapmaya çalıştım. Bu projenin bana çok fazla katkısı oldu , umarım size de faydası olur.
+Bu proje bir Elektrik Mühendisliği öğrencisi olarak benim ilk STM32 projem. Bu kütüphaneyi yazarken çok fazla şey öğrendim ve elimden gelenin en iyisini yapmaya çalıştım. Projenin bana çok fazla katkısı oldu , umarım kullananlara da faydası olur.
 ---
 ## Note on Documentation Language:
 [EN] The code descriptions and comment lines within the library are currently in Turkish. I will translate all comment lines to English in upcoming versions to make it global.  
